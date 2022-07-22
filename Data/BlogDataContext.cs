@@ -5,9 +5,9 @@ namespace Blog.Data
 {
     public class BlogDataContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Blog;Integrated Security=true");
         
+        
+       
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Post> Posts { get; set; }
@@ -16,5 +16,10 @@ namespace Blog.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<User> Users { get; set; }
         //public DbSet<UserRole> UserRoles { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Blog;Integrated Security=true");
+        }
     }
 }
