@@ -13,26 +13,27 @@ namespace Blog
             using(var context = new BlogDataContext())
             {   
                 //Create
-                //  var tag = new Tag {Name = "ASP.NET", Slug = "aspnet"};
-                //  context.Tags.Add(tag);
+                //   var tag = new Tag {Name = "ASP.NET", Slug = "aspnet"};
+                //   context.Tags.Add(tag);
+                //   context.SaveChanges();
+
+                //   var tag2 = new Tag {Name = "ASP.NET MVC", Slug = "aspnet mvc"};
+                //   context.Tags.Add(tag2);
+                //   context.SaveChanges();
+
+                // //Update
+                //  var tag = context.Tags.FirstOrDefault(x=> x.Id == 1);
+                //  tag.Name = ".NET";
+                //  tag.Slug = "dotnet";
+                //  context.Update(tag);
                 //  context.SaveChanges();
 
-                //  var tag2 = new Tag {Name = "ASP.NET MVC", Slug = "aspnet mvc"};
-                //  context.Tags.Add(tag2);
+                // //Delete
+                //  var tag = context.Tags.FirstOrDefault(x=> x.Id == 1);
+                //  context.Remove(tag);
                 //  context.SaveChanges();
 
-                //Update
-                // var tag = context.Tags.FirstOrDefault(x=> x.Id == 1);
-                // tag.Name = ".NET";
-                // tag.Slug = "dotnet";
-                // context.Update(tag);
-                // context.SaveChanges();
-
-                //Delete
-                // var tag = context.Tags.FirstOrDefault(x=> x.Id == 1);
-                // context.Remove(tag);
-                // context.SaveChanges();
-
+                //Read
                 var tags = context
                 .Tags
                 .ToList();                
